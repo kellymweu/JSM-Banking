@@ -44,13 +44,13 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
         <RecentTransactions
           accounts={accountsData}
           transactions={account?.transactions}
-          appwriteItemId={appwriteItem}
+          appwriteItemId={appwriteItemId}
           page={currentPage}
         />
       </div>
       <RightSidebar
         user={loggedIn}
-        transactions={accounts?.transactions}
+        transactions={account?.transactions}
         banks={accountsData?.slice(0, 2)}
       />
     </section>
